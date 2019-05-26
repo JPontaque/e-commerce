@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+html,body{
+    font-family: 'Numans', sans-serif;
+}
+
 .footer {
     position: fixed;
     left: 0;
