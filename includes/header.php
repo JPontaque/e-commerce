@@ -9,7 +9,7 @@
 </head>
 <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="#"><img src="images/logo.png"></a>
+        <a class="navbar-brand" href="./index.php"><img src="images/logo.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="true" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -52,6 +52,7 @@
                     }
                     ?>
                 </li>
+                <?php if(isset($_SESSION['is_admin']) && ($_SESSION['is_admin']) == 'Si'){ ?>
                 <li class="nav-item">
                     <?php
                     if($_SERVER["PHP_SELF"] == '/e-commerce/panel_control.php') {
@@ -61,17 +62,10 @@
                     }
                     ?>
                 </li>
+                <?php } ?>
             </ul>
             <ul class="navbar-nav navbar-right">
-                <li class="nav-item">
-                    <?php
-                    if($_SERVER["PHP_SELF"] == '/e-commerce/login.php' || $_SERVER["PHP_SELF"] == '/e-commerce/registrarse.php') {
-                        echo "<a class=\"nav-link\" href=\"./login.php\" style=\"color: white\"><i class=\"fas fa-chevron-right\"></i> Conectate o registrate <i class=\"fas fa-key\"></i></a>";
-                    } else {
-                        echo "<a class=\"nav-link\" href=\"./login.php\">Conectate o registrate <i class=\"fas fa-key\"></i></a>";
-                    }
-                    ?>
-                </li>
+                <?php if(isset($_SESSION['usuario'])){ ?>
                 <li class="nav-item dropdown">
                     <?php
                     if($_SERVER["PHP_SELF"] == '/e-commerce/cuenta.php') {
@@ -85,6 +79,17 @@
                         <a class="dropdown-item" href="includes/logout.php">Cerrar sesión <i class="fas fa-sign-out-alt"></i></a>
                     </div>
                 </li>
+                <?php } else { ?>
+                <li class="nav-item">
+                    <?php
+                    if($_SERVER["PHP_SELF"] == '/e-commerce/login.php' || $_SERVER["PHP_SELF"] == '/e-commerce/registrarse.php') {
+                        echo "<a class=\"nav-link\" href=\"./login.php\" style=\"color: white\"><i class=\"fas fa-chevron-right\"></i> Conectate o registrate <i class=\"fas fa-key\"></i></a>";
+                    } else {
+                        echo "<a class=\"nav-link\" href=\"./login.php\">Conectate o registrate <i class=\"fas fa-key\"></i></a>";
+                    }
+                    ?>
+                </li>
+                <?php } ?>
                 <li class="nav-item">
                     <a class="nav-link" href="./index.php"><img src="./images/españa.png" width="25px" height="25px"></a>
                 </li>
