@@ -2,7 +2,7 @@
 /** Clase que permite comunicarse con la Base de Datos
  */
 require_once('configuracion.php');
-class BD {
+class Db {
 
     private $conexion;
 

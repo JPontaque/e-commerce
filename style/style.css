@@ -12,3 +12,7 @@ html,body{
     text-align: center;
     background-color: #343a40;
 }
+
+.error{
+    color: red;
+}

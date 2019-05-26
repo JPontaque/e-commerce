@@ -3,6 +3,33 @@ require_once('includes/header.php');
 ?>
 <head>
     <link rel="stylesheet" type="text/css" href="style/login.css">
+    <script>
+        $(function()
+        {
+            $("#btn_ajax").click(function(){
+                var url = "ajax/ajax_registro.php"; // El script a dónde se realizará la petición.
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data: $("#form_ajax").serialize(), // Adjuntar los campos del formulario enviado.
+                    success: function(data)
+                    {
+                        $("#e_nombre").html('');
+                        $("#e_email").html('');
+                        $("#e_password").html('');
+                        $("#e_password2").html('');
+                        $("#e_nombree").html('');
+                        $("#e_apellidos").html('');
+                        $("#e_telefono").html('');
+                        $("#e_direccion").html('');
+                        $("#mensaje").html(data); // Mostrar la respuestas del script PHP.
+                    }
+                });
+
+                return false; // Evitar ejecutar el submit del formulario.
+            });
+        });
+    </script>
 </head>
 <div class="separador2"></div>
 <div class="container2">
