@@ -26,6 +26,7 @@ require_once('includes/header.php');
         });
     </script>
 </head>
+    <div id="separador1"></div>
 <div class="container2">
     <div class="d-flex justify-content-center h-100">
         <div class="card">

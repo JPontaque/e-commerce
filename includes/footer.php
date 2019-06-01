@@ -4,7 +4,7 @@
 </body>
 <footer class="footer mt-auto py-3" style="z-index: 2">
     <div class="container">
-        <span class="text-muted">&copy; 1997-2019, Play4Ever.com o afiliados. Todos los derechos reservados.</span>
+        <span class="text-muted">&copy; 1997-2019, Play4Ever.com o afiliados. Todos los derechos reservados. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Tel: +34 976 23 34 23</span>
     </div>
 </footer>
 </html>

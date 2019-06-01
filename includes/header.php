@@ -45,15 +45,6 @@
                     ?>
                 <?php } ?>
                 </li>
-                <li class="nav-item">
-                    <?php
-                    if($_SERVER["PHP_SELF"] == '/e-commerce/contacto.php') {
-                        echo "<a class=\"nav-link\" href=\"./contacto.php\" style=\"color: white\"><i class=\"fas fa-chevron-right\"></i> <i class=\"fas fa-map-marked-alt\"></i> Contacto</a>";
-                    } else {
-                        echo "<a class=\"nav-link\" href=\"./contacto.php\"> <i class=\"fas fa-map-marked-alt\"></i> Contacto</a>";
-                    }
-                    ?>
-                </li>
                 <?php if(isset($_SESSION['is_admin']) && ($_SESSION['is_admin']) == 'Si'){ ?>
                 <li class="nav-item">
                     <?php
