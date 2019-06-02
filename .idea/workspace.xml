@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="04a6edcf-9fec-4504-b067-aa7f40a9f964" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/carrito.php" beforeDir="false" afterPath="$PROJECT_DIR$/carrito.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cuenta.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuenta.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/factura.php" beforeDir="false" afterPath="$PROJECT_DIR$/factura.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel_annadir_producto.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel_annadir_producto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel_annadir_usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel_annadir_usuario.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel_borrar_producto.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel_borrar_producto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel_borrar_usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel_borrar_usuario.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel_control.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel_control.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel_editar_producto.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel_editar_producto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel_editar_usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel_editar_usuario.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel_facturas.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel_facturas.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel_producto.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel_producto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/perfil_baja.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil_baja.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/perfil_datos_personales.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil_datos_personales.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/perfil_datos_privados.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil_datos_privados.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/perfil_factura.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil_factura.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tienda.php" beforeDir="false" afterPath="$PROJECT_DIR$/tienda.php" afterDir="false" />
-    </list>
+    <list default="true" id="04a6edcf-9fec-4504-b067-aa7f40a9f964" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,14 +26,14 @@
         <counts>
           <entry key="css" value="7" />
           <entry key="js" value="3" />
-          <entry key="php" value="179" />
+          <entry key="php" value="180" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="7" />
           <entry key="JavaScript" value="3" />
-          <entry key="PHP" value="179" />
+          <entry key="PHP" value="180" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -79,15 +59,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/panel_control.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/panel_editar_producto.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="408">
@@ -96,11 +67,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tienda.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="391">
               <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ajax/ajax_annadir_producto.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="799">
+              <caret line="47" column="5" lean-forward="true" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -351,12 +331,12 @@
       <workItem from="1559238956783" duration="6343000" />
       <workItem from="1559402201716" duration="6847000" />
       <workItem from="1559463389675" duration="11401000" />
-      <workItem from="1559480580261" duration="18821000" />
+      <workItem from="1559480580261" duration="19063000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72420000" />
+    <option name="totallyTimeSpent" value="72662000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -493,13 +473,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/ajax_annadir_producto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="47" column="5" lean-forward="true" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -753,6 +726,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/ajax_annadir_producto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" column="5" lean-forward="true" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
         </state>
       </provider>
     </entry>
