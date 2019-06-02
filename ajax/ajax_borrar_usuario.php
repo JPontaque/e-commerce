@@ -34,17 +34,16 @@ if (isset($_POST["ajax"])) {
     }
     else
     {
-        if($_SESSION['usuario_modificar'] != null) {
-            eliminar_cuenta($_SESSION['usuario_modificar']);
-            eliminar_producto_factura($_SESSION['usuario_modificar']);
-            eliminar_usuario_factura($_SESSION['usuario_modificar']);
-            $mensaje = "<script>window.location='panel_control.php';</script>";
-        } else {
-            eliminar_cuenta($_SESSION['usuario']);
-            eliminar_producto_factura($_SESSION['usuario']);
-            eliminar_usuario_factura($_SESSION['usuario']);
+
+        eliminar_cuenta($_SESSION['usuario_modificar']);
+        eliminar_producto_factura($_SESSION['usuario_modificar']);
+        eliminar_usuario_factura($_SESSION['usuario_modificar']);
+        if($_SESSION['usuario_modificar'] == $_SESSION['usuario']){
             $mensaje = "<script>window.location='includes/logout.php';</script>";
+        } else {
+            $mensaje = "<script>window.location='panel_control.php';</script>";
         }
+
     }
 }
 
