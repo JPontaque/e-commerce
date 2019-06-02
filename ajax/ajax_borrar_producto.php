@@ -35,6 +35,7 @@ if (isset($_POST["ajax"])) {
     else
     {
         eliminar_producto($_SESSION['producto_modificar']);
+        eliminar_producto_carritos($_SESSION['producto_modificar']);
         $mensaje = "<script>window.location='panel_producto.php';</script>";
     }
 }

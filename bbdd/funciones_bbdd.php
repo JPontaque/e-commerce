@@ -190,6 +190,16 @@ function eliminar_producto($producto){
     $bbdd->desconectar();
 }
 
+function eliminar_producto_carritos($producto){
+    $bbdd = new Db();
+
+    $sql = 'DELETE FROM carritos WHERE CONVERT(producto,BINARY) = CONVERT(?,BINARY)';
+    $parametros = array($producto);
+    $bbdd->lanzar_consulta($sql, $parametros);
+
+    $bbdd->desconectar();
+}
+
 function producto_carrito_annadir($usuario, $producto, $precio, $foto){
     $bbdd = new Db();
 
