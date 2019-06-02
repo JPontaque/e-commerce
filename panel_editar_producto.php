@@ -12,6 +12,8 @@ require_once('bbdd/funciones_bbdd.php');
 
 $producto_modificar = buscar_producto($producto);
 $_SESSION['producto_modificar'] = $producto_modificar['productoM'];
+$_SESSION['producto_precio'] = $producto_modificar['productoP'];
+$_SESSION['producto_foto'] = $producto_modificar['productoF'];
 ?>
     <head>
         <link rel="stylesheet" type="text/css" href="style/style.css">

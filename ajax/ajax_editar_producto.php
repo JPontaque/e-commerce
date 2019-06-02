@@ -105,6 +105,7 @@ if (isset($_POST["ajax"])) {
         $descripcion = base64_encode(openCypher('encrypt', $descripcion));
         $imagen = base64_encode(openCypher('encrypt', $imagen));
 
+        actualizar_carrito($producto_copia, $precio, $imagen, $_SESSION['producto_modificar']);
         producto_datos_nuevos($producto_copia, $descripcion, $imagen, $precio, $_SESSION['producto_modificar']);
         $mensaje = "<script>window.location='panel_producto.php';</script>";
     }

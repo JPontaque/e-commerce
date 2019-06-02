@@ -40,7 +40,7 @@ if (isset($_POST["ajax"])) {
             $nombre_copia = base64_encode(openCypher('encrypt', $nombre_copia));
 
             $repetido = usuario_unico($nombre_copia);
-            $login = logear($nombre_copia);
+            $login = logear($_SESSION['usuario']);
         }
     }
 
@@ -165,6 +165,8 @@ if (isset($_POST["ajax"])) {
         $email = base64_encode(openCypher('encrypt', $email));
 
         usuario_datos_nuevos($nombre_copia, $email, $nombree, $apellidos, $telefono, $direccion, $_SESSION['usuario']);
+        actualizar_usuario_carrito($nombre_copia, $_SESSION['usuario']);
+        actualizar_usuario_factura($nombre_copia, $_SESSION['usuario']);
         $_SESSION['usuario'] = $nombre_copia;
         $_SESSION['email'] = $email;
         $_SESSION['nombre'] = $nombree;

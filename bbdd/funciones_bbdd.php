@@ -124,6 +124,16 @@ function usuario_hacer_admin($admin, $usuario){
     $bbdd->desconectar();
 }
 
+function actualizar_carrito($producto, $precio, $foto, $productoM){
+    $bbdd = new Db();
+
+    $sql = 'UPDATE carritos SET producto = ?, precio = ?, foto = ? WHERE CONVERT(producto,BINARY) = CONVERT(?,BINARY)';
+    $parametros = array($producto, $precio, $foto, $productoM);
+    $bbdd->lanzar_consulta($sql, $parametros);
+
+    $bbdd->desconectar();
+}
+
 function producto_unico($producto){
     $bbdd = new Db();
 
@@ -175,6 +185,26 @@ function producto_datos_nuevos($producto, $descripcion, $imagen, $precio, $produ
 
     $sql = 'UPDATE productos SET producto = ?, descripcion = ?, foto = ?, precio = ? WHERE CONVERT(producto,BINARY) = CONVERT(?,BINARY)';
     $parametros = array($producto, $descripcion, $imagen, $precio, $productoM);
+    $bbdd->lanzar_consulta($sql, $parametros);
+
+    $bbdd->desconectar();
+}
+
+function actualizar_usuario_carrito($usuario, $usuarioM){
+    $bbdd = new Db();
+
+    $sql = 'UPDATE carritos SET usuario = ? WHERE CONVERT(usuario,BINARY) = CONVERT(?,BINARY)';
+    $parametros = array($usuario, $usuarioM);
+    $bbdd->lanzar_consulta($sql, $parametros);
+
+    $bbdd->desconectar();
+}
+
+function actualizar_usuario_factura($usuario, $usuarioM){
+    $bbdd = new Db();
+
+    $sql = 'UPDATE facturas SET usuario = ? WHERE CONVERT(usuario,BINARY) = CONVERT(?,BINARY)';
+    $parametros = array($usuario, $usuarioM);
     $bbdd->lanzar_consulta($sql, $parametros);
 
     $bbdd->desconectar();
