@@ -69,7 +69,7 @@
                     ?>
                     <div class="dropdown-menu dropdown-menu-right">
                         <a class="dropdown-item" href="./cuenta.php"> <i class="fas fa-user"></i> Mi cuenta</a>
-                        <a class="dropdown-item" href="includes/logout.php"><i class="fas fa-sign-out-alt"></i>v Cerrar sesión</a>
+                        <a class="dropdown-item" href="includes/logout.php"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
                     </div>
                 </li>
                 <?php } else { ?>

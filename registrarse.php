@@ -1,8 +1,10 @@
 <?php
+session_start();
 require_once('includes/header.php');
 ?>
 <head>
     <link rel="stylesheet" type="text/css" href="style/login.css">
+    <script src="jquery/jquery-3.3.1.min.js"></script>
     <script>
         $(function()
         {

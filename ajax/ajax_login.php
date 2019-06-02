@@ -11,9 +11,10 @@ $mensaje = null;
 if (isset($_POST["ajax"])) {
     $nombre = $_POST["username"];
     $password = $_POST["password"];
-    $repetido = usuario_unico($nombre);
-    $login = logear($nombre);
-/*
+    $repetido = null;
+    $login = null;
+    $nombre_copia = null;
+
     if($nombre != '' && $password != ''){
         if(is_string($nombre) && is_string($password)) {
             $nombre = filter_var($nombre, FILTER_SANITIZE_STRING);
@@ -22,15 +23,17 @@ if (isset($_POST["ajax"])) {
             $nombre = strip_tags(trim($nombre));
             $password = strip_tags(trim($password));
 
-            $nombre = base64_encode(openCypher('encrypt', $nombre));
+            $nombre_copia = $nombre;
 
-            $repetido = usuario_unico($nombre);
-            $login = logear($nombre);
+            $nombre_copia = base64_encode(openCypher('encrypt', $nombre_copia));
+
+            $repetido = usuario_unico($nombre_copia);
+            $login = logear($nombre_copia);
         } else {
             $mensaje = "<script>document.getElementById('e_nombre').innerHTML='Algo no anda bien con lo escrito...';</script>";
         }
     }
-*/
+
     if ($nombre == '')
     {
         $mensaje = "<script>document.getElementById('e_nombre').innerHTML='El campo es requerido';</script>";
@@ -78,7 +81,7 @@ if (isset($_POST["ajax"])) {
         $_SESSION['apellidos'] = $login['apellidos'];
         $_SESSION['telefono'] = $login['telefono'];
         $_SESSION['direccion'] = $login['direccion'];
-        $mensaje = "<script>window.location='../../home.php';</script>";
+        $mensaje = "<script>window.location='index.php';</script>";
     }
 }
 

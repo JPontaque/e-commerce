@@ -14,8 +14,9 @@ if (isset($_POST["ajax"])) {
     $apellidos = $_POST["apellidos"];
     $telefono = $_POST["telefono"];
     $direccion = $_POST["direccion"];
-    $repetido = usuario_unico($nombre);
-/*
+    $repetido = null;
+    $nombre_copia = null;
+
     if($nombre != '' && $email != '' && $password != '' && $repetir_password != '' && $nombree != '' && $apellidos != '' && $telefono != '' &&
         $direccion != ''){
         if(is_string($nombre) && is_string($password) && is_string($repetir_password) && is_string($email) && is_string($nombree) && is_string($apellidos)
@@ -38,20 +39,13 @@ if (isset($_POST["ajax"])) {
             $direccion = strip_tags(trim($direccion));
             $email = strip_tags(trim($email));
 
-            $nombre = base64_encode(openCypher('encrypt', $nombre));
-            if($repetir_password == $password){
-                $password = password_hash($password, PASSWORD_DEFAULT);
-            }
-            $nombree = base64_encode(openCypher('encrypt', $nombree));
-            $apellidos = base64_encode(openCypher('encrypt', $apellidos));
-            $telefono = base64_encode(openCypher('encrypt', $telefono));
-            $direccion = base64_encode(openCypher('encrypt', $direccion));
-            $email = base64_encode(openCypher('encrypt', $email));
+            $nombre_copia = $nombre;
+            $nombre_copia = base64_encode(openCypher('encrypt', $nombre_copia));
 
-            $repetido = usuario_unico($nombre);
+            $repetido = usuario_unico($nombre_copia);
         }
     }
-*/
+
     if ($nombre == '')
     {
         $mensaje = "<script>document.getElementById('e_nombre').innerHTML='El campo es requerido';</script>";
@@ -170,8 +164,16 @@ if (isset($_POST["ajax"])) {
     }
     else
     {
-        insertar_usuario($nombre, $password, $nombree, $apellidos, $email, $telefono, $direccion);
-        $mensaje = "<script>window.location='../../login.php';</script>";
+
+        $password = password_hash($password, PASSWORD_DEFAULT);
+        $nombree = base64_encode(openCypher('encrypt', $nombree));
+        $apellidos = base64_encode(openCypher('encrypt', $apellidos));
+        $telefono = base64_encode(openCypher('encrypt', $telefono));
+        $direccion = base64_encode(openCypher('encrypt', $direccion));
+        $email = base64_encode(openCypher('encrypt', $email));
+
+        insertar_usuario($nombre_copia, $password, $nombree, $apellidos, $email, $telefono, $direccion);
+        $mensaje = "<script>window.location='login.php';</script>";
     }
 }
 
