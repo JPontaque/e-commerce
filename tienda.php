@@ -38,7 +38,7 @@ $numero_paginas = ceil($numero_fotos / CANTIDAD_PRODUCTOS);
                     <p class="card-text"><?= openCypher('decrypt', base64_decode($fila[2])) ?></p>
                 </div>
                 <div class="card-footer">
-                    <small class="text-muted"><b>$<?= $fila[4] ?></b></small><a href="carrito_annadir.php?producto=<?= $fila[0] ?>" style="text-decoration: none; float: right"><button class="btn btn-success">Añadir</button></a>
+                    <small class="text-muted"><b>$<?= $fila[4] ?></b></small><a href="ajax/carrito_annadir.php?producto=<?= $fila[0] ?>" style="text-decoration: none; float: right"><button class="btn btn-success">Añadir</button></a>
                 </div>
             </div>
             <?php

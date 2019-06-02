@@ -2,6 +2,7 @@
 session_start();
 
 require_once('includes/header.php');
+require_once('bbdd/funciones_cifrado.php');
 require_once('bbdd/funciones_bbdd.php');
 require_once('bbdd/Db.php');
 
@@ -38,12 +39,12 @@ $precio_total = suma_producto_carrito($_SESSION['usuario']);
                     while($fila = $consulta->fetch_row()){
                         ?>
                         <tr>
-                            <td><img src="imagenes/<?= $fila[3] ?>" width="45px" height="45px"/></td>
-                            <td><?= $fila[1] ?></td>
+                            <td><img src="productos/<?= openCypher('decrypt', base64_decode($fila[4])) ?>" width="45px" height="45px"/></td>
+                            <td><?= openCypher('decrypt', base64_decode($fila[2])) ?></td>
                             <td>In Stock</td>
                             <td style="text-align: center">1</td>
-                            <td class="text-right"><?= $fila[2] ?> €</td>
-                            <td class="text-right"><a href="carrito_borrar_producto.php?producto=<?= $fila[4] ?>"><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button></a></td>
+                            <td class="text-right"><?= $fila[3] ?> €</td>
+                            <td class="text-right"><a href="ajax/carrito_borrar.php?producto=<?= $fila[6] ?>"><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button></a></td>
                         </tr>
                         <?php
                     }

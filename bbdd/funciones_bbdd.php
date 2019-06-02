@@ -162,7 +162,7 @@ function buscar_producto($id){
     if($consulta->num_rows == 1){
         $linea = $consulta->fetch_row();
         $resultado['productoM'] = $linea[1];
-        $resultado['productoP'] = $linea[5];
+        $resultado['productoP'] = $linea[4];
         $resultado['productoF'] = $linea[3];
     }
 

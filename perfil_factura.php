@@ -28,11 +28,11 @@ require_once('bbdd/Db.php');
             while($fila = $consulta->fetch_row()){
                 ?>
                 <tr>
-                    <td><?= $fila[4] ?></td>
-                    <td><?= $fila[3] ?></td>
-                    <td><?= $fila[0] ?></td>
-                    <td style="text-align: center"><?= $fila[1] ?></td>
-                    <td><?= $fila[2] ?> €</td>
+                    <td><?= $fila[5] ?></td>
+                    <td><?= openCypher('decrypt', base64_decode($fila[4])) ?></td>
+                    <td><?= openCypher('decrypt', base64_decode($fila[1])) ?></td>
+                    <td style="text-align: center"><?= $fila[2] ?></td>
+                    <td><?= $fila[3] ?> €</td>
                 </tr>
                 <?php
             }

@@ -74,11 +74,11 @@ $id_factura = rand(0, getrandmax());
                                     while($fila = $consulta->fetch_row()){
                                         ?>
                                         <tr>
-                                            <td><img src="imagenes/<?= $fila[3] ?>" width="45px" height="45px"/></td>
-                                            <td><?= $fila[1] ?></td>
+                                            <td><img src="productos/<?= openCypher('decrypt', base64_decode($fila[4])) ?>" width="45px" height="45px"/></td>
+                                            <td><?= openCypher('decrypt', base64_decode($fila[2])) ?></td>
                                             <td>In Stock</td>
                                             <td>1</td>
-                                            <td><?= $fila[2] ?> €</td>
+                                            <td><?= $fila[3] ?> €</td>
                                         </tr>
                                         <?php
                                     }
@@ -91,7 +91,7 @@ $id_factura = rand(0, getrandmax());
                         </div>
                         <div class="d-flex flex-row-reverse bg-dark text-white p-4">
                             <div class="py-3 px-5 text-right">
-                                <a href="pagar_factura.php?id=<?= $id_factura ?>" style="text-decoration: none">
+                                <a href="ajax/pagar_factura.php?id=<?= $id_factura ?>" style="text-decoration: none">
                                     <button class="btn btn-lg btn-block btn-success text-uppercase">Pagar</button>
                                 </a>
                             </div>
