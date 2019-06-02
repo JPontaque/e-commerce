@@ -7,6 +7,7 @@ else
 session_start();
 
 require_once('includes/header.php');
+require_once('bbdd/funciones_cifrado.php');
 require_once('bbdd/funciones_bbdd.php');
 require_once('bbdd/Db.php');
 $numero_fotos = get_cantidad_productos();
@@ -14,8 +15,6 @@ $numero_paginas = ceil($numero_fotos / CANTIDAD_PRODUCTOS);
 ?>
 
 <div class="container">
-    <br>
-    <br>
     <br>
     <br>
     <br>
@@ -33,13 +32,13 @@ $numero_paginas = ceil($numero_fotos / CANTIDAD_PRODUCTOS);
         while($fila = $consulta->fetch_row()){
             ?>
             <div class="card">
-                <img class="card-img-top" src="<?=PATH_IMAGENES . $fila[3]?>" alt="Card image cap">
+                <img class="card-img-top" src="<?=PATH_IMAGENES . openCypher('decrypt', base64_decode($fila[3]))?>" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title"><?= $fila[1] ?></h5>
-                    <p class="card-text"><?= $fila[2] ?></p>
+                    <h5 class="card-title"><?= openCypher('decrypt', base64_decode($fila[1])) ?></h5>
+                    <p class="card-text"><?= openCypher('decrypt', base64_decode($fila[2])) ?></p>
                 </div>
                 <div class="card-footer">
-                    <small class="text-muted"><b>$<?= $fila[5] ?></b></small><a href="carrito_annadir.php?producto=<?= $fila[0] ?>" style="text-decoration: none; float: right"><button class="btn btn-success">Añadir</button></a>
+                    <small class="text-muted"><b>$<?= $fila[4] ?></b></small><a href="carrito_annadir.php?producto=<?= $fila[0] ?>" style="text-decoration: none; float: right"><button class="btn btn-success">Añadir</button></a>
                 </div>
             </div>
             <?php

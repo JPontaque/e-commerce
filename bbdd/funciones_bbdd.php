@@ -127,7 +127,7 @@ function usuario_hacer_admin($admin, $usuario){
 function producto_unico($producto){
     $bbdd = new Db();
 
-    $sql = 'SELECT titulo FROM productos WHERE CONVERT(titulo,BINARY) = CONVERT(?,BINARY)';
+    $sql = 'SELECT producto FROM productos WHERE CONVERT(producto,BINARY) = CONVERT(?,BINARY)';
     $parametros = array($producto);
     $consulta = $bbdd->lanzar_consulta($sql, $parametros);
     $resultado = array();
@@ -144,7 +144,7 @@ function producto_unico($producto){
 function insertar_producto($producto, $descripcion, $imagen, $precio){
     $bbdd = new Db();
 
-    $sql = 'INSERT INTO productos (titulo, descripcion, foto, precio) VALUES (?, ?, ?, ?);';
+    $sql = 'INSERT INTO productos (producto, descripcion, foto, precio) VALUES (?, ?, ?, ?);';
     $parametros = array($producto, $descripcion, $imagen, $precio);
     $bbdd->lanzar_consulta($sql, $parametros);
 
@@ -173,7 +173,7 @@ function buscar_producto($id){
 function producto_datos_nuevos($producto, $descripcion, $imagen, $precio, $productoM){
     $bbdd = new Db();
 
-    $sql = 'UPDATE productos SET titulo = ?, descripcion = ?, foto = ?, precio = ? WHERE CONVERT(titulo,BINARY) = CONVERT(?,BINARY)';
+    $sql = 'UPDATE productos SET producto = ?, descripcion = ?, foto = ?, precio = ? WHERE CONVERT(producto,BINARY) = CONVERT(?,BINARY)';
     $parametros = array($producto, $descripcion, $imagen, $precio, $productoM);
     $bbdd->lanzar_consulta($sql, $parametros);
 
@@ -183,7 +183,7 @@ function producto_datos_nuevos($producto, $descripcion, $imagen, $precio, $produ
 function eliminar_producto($producto){
     $bbdd = new Db();
 
-    $sql = 'DELETE FROM productos WHERE CONVERT(titulo,BINARY) = CONVERT(?,BINARY)';
+    $sql = 'DELETE FROM productos WHERE CONVERT(producto,BINARY) = CONVERT(?,BINARY)';
     $parametros = array($producto);
     $bbdd->lanzar_consulta($sql, $parametros);
 

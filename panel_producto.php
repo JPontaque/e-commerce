@@ -29,7 +29,7 @@ require_once('bbdd/Db.php');
                 <tr>
                     <td><?= $fila[5] ?></td>
                     <td><?= $fila[0] ?></td>
-                    <td><?= $fila[1] ?></td>
+                    <td><?= openCypher('decrypt', base64_decode($fila[1])) ?></td>
                     <td>$<?= $fila[4] ?></td>
                     <td style="text-align: center">
                         <a href="panel_borrar_producto.php?producto=<?= $fila[0] ?>" style="text-decoration: none"><button id="<?= $fila[0] ?>" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button></a>
