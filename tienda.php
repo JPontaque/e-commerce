@@ -5,6 +5,23 @@ else
     $pagina = 1;
 
 session_start();
+if(isset($_SESSION['usuario'])) {
+    if (isset($_SESSION['tiempo'])) {
+
+        //Tiempo en segundos para dar vida a la sesión.
+        $inactivo = 300;//5min en este caso.
+
+        //Calculamos tiempo de vida inactivo.
+        $vida_session = time() - $_SESSION['tiempo'];
+
+        //Compraración para redirigir página, si la vida de sesión sea mayor a el tiempo insertado en inactivo.
+        if ($vida_session > $inactivo) {
+            header("Location: includes/logout.php");
+        }
+
+    }
+    $_SESSION['tiempo'] = time();
+}
 
 require_once('includes/header.php');
 require_once('bbdd/funciones_cifrado.php');
@@ -38,7 +55,11 @@ $numero_paginas = ceil($numero_fotos / CANTIDAD_PRODUCTOS);
                     <p class="card-text"><?= openCypher('decrypt', base64_decode($fila[2])) ?></p>
                 </div>
                 <div class="card-footer">
-                    <small class="text-muted"><b>$<?= $fila[4] ?></b></small><a href="ajax/carrito_annadir.php?producto=<?= $fila[0] ?>" style="text-decoration: none; float: right"><button class="btn btn-success">Añadir</button></a>
+                    <?php if(isset($_SESSION['usuario'])){ ?>
+                        <small class="text-muted"><b>$<?= $fila[4] ?></b></small><a href="ajax/carrito_annadir.php?producto=<?= $fila[0] ?>" style="text-decoration: none; float: right"><button class="btn btn-success">Añadir</button></a>
+                    <?php } else { ?>
+                        <small class="text-muted"><b>$<?= $fila[4] ?></b></small><a href="ajax/carrito_annadir.php?producto=<?= $fila[0] ?>" style="text-decoration: none; float: right"><button class="btn btn-success" disabled>Añadir</button></a>
+                    <?php } ?>
                 </div>
             </div>
             <?php

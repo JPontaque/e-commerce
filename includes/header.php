@@ -91,10 +91,7 @@
                 </li>
                 <?php } ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="./index.php"><img src="./images/españa.png" width="25px" height="25px"></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./index.php"><img src="./images/ingles.png" width="25px" height="25px"></a>
+                    <a class="nav-link" href="#"><img src="./images/españa.png" width="25px" height="25px"></a>
                 </li>
             </ul>
         </div>

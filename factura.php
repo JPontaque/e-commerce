@@ -1,6 +1,24 @@
 <?php
 session_start();
+if(isset($_SESSION['usuario'])) {
+    if (isset($_SESSION['tiempo'])) {
 
+        //Tiempo en segundos para dar vida a la sesión.
+        $inactivo = 300;//5min en este caso.
+
+        //Calculamos tiempo de vida inactivo.
+        $vida_session = time() - $_SESSION['tiempo'];
+
+        //Compraración para redirigir página, si la vida de sesión sea mayor a el tiempo insertado en inactivo.
+        if ($vida_session > $inactivo) {
+            header("Location: includes/logout.php");
+        }
+
+    }
+    $_SESSION['tiempo'] = time();
+} else {
+    header("location:index.php");
+}
 require_once('includes/header.php');
 require_once('bbdd/funciones_cifrado.php');
 require_once('bbdd/funciones_bbdd.php');
