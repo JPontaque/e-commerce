@@ -6,6 +6,7 @@ require_once('includes/menu_panel.php');
 ?>
     <head>
         <link rel="stylesheet" type="text/css" href="style/style.css">
+        <script src="jquery/jquery-3.3.1.min.js"></script>
         <script>
             $(function()
             {

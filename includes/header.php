@@ -65,7 +65,9 @@
                 <?php if(isset($_SESSION['usuario'])){ ?>
                 <li class="nav-item dropdown">
                     <?php
-                    if($_SERVER["PHP_SELF"] == '/e-commerce/cuenta.php') {
+                    if($_SERVER["PHP_SELF"] == '/e-commerce/cuenta.php'|| $_SERVER["PHP_SELF"] == '/e-commerce/perfil_datos_personales.php'
+                        || $_SERVER["PHP_SELF"] == '/e-commerce/perfil_datos_privados.php'|| $_SERVER["PHP_SELF"] == '/e-commerce/perfil_baja.php'
+                        || $_SERVER["PHP_SELF"] == '/e-commerce/perfil_factura.php') {
                         echo "<a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"dropdown04\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"true\" style=\"color: white\"><i class=\"fas fa-chevron-right\"></i> <i class=\"fas fa-address-card\"></i> Usuario</a>";
                     } else {
                         echo "<a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"dropdown04\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"true\"> <i class=\"fas fa-address-card\"></i> Usuario</a>";
