@@ -34,9 +34,9 @@
                     }
                     ?>
                 </li>
-                <?php require_once('bbdd/funciones_bbdd.php'); $cantidad_productos = contar_productos_factura($_SESSION['usuario']);?>
                 <li class="nav-item">
                 <?php if(isset($_SESSION['usuario'])){ ?>
+                    <?php require_once('bbdd/funciones_bbdd.php'); $cantidad_productos = contar_productos_factura($_SESSION['usuario']);?>
                     <?php
                     if($_SERVER["PHP_SELF"] == '/e-commerce/carrito.php') {
                         echo "<a class=\"nav-link\" href=\"./carrito.php\" style=\"color: white\"><i class=\"fas fa-chevron-right\"></i> <i class=\"fas fa-shopping-cart\"></i> Carrito ($cantidad_productos)</a>";
