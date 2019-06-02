@@ -49,7 +49,10 @@
                 <li class="nav-item">
                     <?php
                     if($_SERVER["PHP_SELF"] == '/e-commerce/panel_control.php' || $_SERVER["PHP_SELF"] == '/e-commerce/panel_producto.php'
-                    || $_SERVER["PHP_SELF"] == '/e-commerce/panel_facturas.php' || $_SERVER["PHP_SELF"] == '/e-commerce/panel_annadir_usuario.php') {
+                    || $_SERVER["PHP_SELF"] == '/e-commerce/panel_facturas.php' || $_SERVER["PHP_SELF"] == '/e-commerce/panel_annadir_usuario.php'
+                        || $_SERVER["PHP_SELF"] == '/e-commerce/panel_annadir_producto.php' || $_SERVER["PHP_SELF"] == '/e-commerce/panel_borrar_producto.php'
+                        || $_SERVER["PHP_SELF"] == '/e-commerce/panel_editar_producto.php' || $_SERVER["PHP_SELF"] == '/e-commerce/panel_borrar_usuario.php'
+                        || $_SERVER["PHP_SELF"] == '/e-commerce/panel_editar_usuario.php') {
                         echo "<a class=\"nav-link\" href=\"./panel_control.php\" style=\"color: white\"><i class=\"fas fa-chevron-right\"></i> <i class=\"fas fa-atlas\"></i> Panel de control</a>";
                     } else {
                         echo "<a class=\"nav-link\" href=\"./panel_control.php\"> <i class=\"fas fa-atlas\"></i> Panel de control</a>";
