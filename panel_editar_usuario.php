@@ -4,7 +4,7 @@ if (isset($_REQUEST["usuario"]))
     $usuario = $_REQUEST["usuario"];
 else
     $usuario = 0;
-if(isset($_SESSION['usuario'])) {
+if(isset($_SESSION['is_admin']) && ($_SESSION['is_admin']) == 'Si'){
     if (isset($_SESSION['tiempo'])) {
 
         //Tiempo en segundos para dar vida a la sesión.

@@ -65,7 +65,8 @@ $id_factura = rand(0, getrandmax());
                                 <p class="font-weight-bold mb-4">Detalles Empresa</p>
                                 <p class="mb-1"><span class="text-muted">Telefono: </span> +34 976341287</p>
                                 <p class="mb-1"><span class="text-muted">Empresa ID: </span> 10253642</p>
-                                <p class="mb-1"><span class="text-muted">Payment Type: </span> PayPal</p>
+                                <p class="mb-1"><span class="text-muted">Tipo de pago: </span> Transferencia bancaria</p>
+                                <p class="mb-1"><span class="text-muted">Cuenta bancaria Empresa: </span> 2546-4532-2389-9807</p>
                             </div>
                         </div>
 
@@ -111,6 +112,11 @@ $id_factura = rand(0, getrandmax());
                             <div class="py-3 px-5 text-right">
                                 <a href="ajax/pagar_factura.php?id=<?= $id_factura ?>" style="text-decoration: none">
                                     <button class="btn btn-lg btn-block btn-success text-uppercase">Pagar</button>
+                                </a>
+                            </div>
+                            <div class="py-3 px-5 text-right">
+                                <a href="#" style="text-decoration: none">
+                                    <button class="btn btn-lg btn-block btn-info text-uppercase" onclick="window.print();">Imprimir</button>
                                 </a>
                             </div>
                             <div class="py-3 px-5 text-right">

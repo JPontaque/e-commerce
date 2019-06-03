@@ -139,14 +139,14 @@ require_once('includes/header.php');
         <div class="row">
             <div class="col-lg-4">
                 <img class="rounded-circle" src="images/tiendita.png" alt="Generic placeholder image" width="140" height="140">
-                <h2>Tienda física</h2>
-                <p>Nuestra sede principal se encuentra en Zaragoza. Somos una tienda pequeña, pero con muchas ganas de crecer y hacer un futuro con vosotros. <p>Puedes visitar nuestra tienda online para poder ver todos nuestros productos en stock.</p></p>
+                <h2>Oficina</h2>
+                <p>Nuestra sede principal se encuentra en Zaragoza. Somos una tienda online pequeña, pero con muchas ganas de crecer y hacer un futuro con vosotros. <p>Puedes visitar nuestra tienda online para poder ver todos nuestros productos en stock.</p></p>
                 <p><a class="btn btn-secondary" href="tienda.php" role="button">Ver tienda »</a></p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
                 <img class="rounded-circle" src="images/atencion.png" alt="Generic placeholder image" width="140" height="140">
                 <h2>Atención telefónica</h2>
-                <p>Disponemos de atención al cliente 24/7. Además de poder contactar con nosotros desde la web, tambien puedes llamar al servicio de atención al cliente que tenemos, usando la siguiente franja horaria: <p>Lunes - Viernes de 10.00h - 20.00h</p></p>
+                <p>Disponemos de atención al cliente. Además de poder contactar con nosotros desde la web, tambien puedes llamar al servicio de atención al cliente que tenemos, usando la siguiente franja horaria: <p>Lunes - Viernes de 12.00h - 18.00h</p></p>
                 <p></p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">

@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION['usuario'])) {
+if(isset($_SESSION['is_admin']) && ($_SESSION['is_admin']) == 'Si'){
     if (isset($_SESSION['tiempo'])) {
 
         //Tiempo en segundos para dar vida a la sesión.
